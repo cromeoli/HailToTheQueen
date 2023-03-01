@@ -1,3 +1,6 @@
+const knightAudio1 = new Audio("src/assets/audio/EvilKnightRoar.mp3")
+const knightAudio2 = new Audio("src/assets/audio/EvilKnightLaugh.mp3")
+
 const left = document.querySelector(".sectionCoolSlider #left-side")
 const sectionCoolSlider = document.querySelector(".sectionCoolSlider")
 const card = document.querySelector(".cardSectionCard");
@@ -29,10 +32,18 @@ hiddenElements.forEach((el) => observer.observe(el))
 
 knightCard.addEventListener("click", function() {
     this.classList.toggle("flipped");
+
+    if (this.classList.contains("flipped")) {
+        knightAudio1.play();
+    }
 });
 
 pawnCard.addEventListener("click", function() {
     this.classList.toggle("flipped");
+
+    if (this.classList.contains("flipped")) {
+        knightAudio2.play();
+    }
 });
 
 sectionCoolSlider.addEventListener("mousemove", e => handleOnMove(e))
