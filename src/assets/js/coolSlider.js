@@ -5,6 +5,18 @@ const card = document.querySelector(".cardSectionCard");
 const knightCard = document.querySelector("#knightCard");
 const pawnCard = document.querySelector("#pawnCard");
 
+const hiddenElements = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show')
+        }
+    })
+})
+
 const handleOnMove = e => {
     const p = e.clientX / window.innerWidth * 100;
 
@@ -12,6 +24,8 @@ const handleOnMove = e => {
     console.log(p)
 }
 
+
+hiddenElements.forEach((el) => observer.observe(el))
 
 knightCard.addEventListener("click", function() {
     this.classList.toggle("flipped");
