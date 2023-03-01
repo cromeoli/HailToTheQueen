@@ -1,0 +1,73 @@
+.cardSection
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+.cardSectionHeader
+  color: white
+  font-family: $fontAgitProp
+  font-weight: 900
+  font-size: 3.5em
+  padding: .3em
+  margin: 1em
+  border: #ba2323 solid 3px
+
+.cardSectionText
+  color: white
+  font-family: $fontLexend
+  font-size: 18px
+  width: 40%
+  padding: 2em
+
+.cardSectionContainer
+  display: flex
+  justify-content: center
+  align-items: center
+
+.cardSectionCardImage
+  height: 20em
+
+.cardSectionCard
+  position: relative
+  width: 20em
+  height: 30em
+  perspective: 800px
+  cursor: pointer
+
+
+.cardSectionInnerBox
+  position: absolute
+  width: 100%
+  height: 100%
+  transition: transform 0.8s
+  transform-style: preserve-3d
+
+
+.cardSectionCardFront,
+.cardSectionCardBack
+  position: absolute
+  width: 100%
+  height: 100%
+  backface-visibility: hidden
+
+
+.cardSectionCardFront img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+
+.cardSectionCardBack
+  border: black solid 9px
+  background: $colorRed
+  transform: rotateY(180deg)
+
+.cardSectionCardBack img
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+
+.cardSectionCard.flipped .cardSectionInnerBox
+  transform: rotateY(180deg)
