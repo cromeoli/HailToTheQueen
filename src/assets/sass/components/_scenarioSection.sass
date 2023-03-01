@@ -1,0 +1,22 @@
+.scenarioSection
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+.scenarioSectionCarousel
+  display: flex
+  width: 80%
+  height: 30rem
+
+.scenarioSectionCarousel img
+  width: 0
+  flex-grow: 1
+  object-fit: cover
+  opacity: .8
+  transition: .5s ease
+
+.scenarioSectionCarousel img:hover
+  width: 300px
+  opacity: 1
+  filter: contrast(120%)
