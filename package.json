@@ -1,14 +1,14 @@
 {
   "name": "diwhailtotheking",
   "version": "1.0.0",
-  "description": "",
+  "description": "Repository for a class assignment tocreate a promotional one page for a video game concept called \"Hail to the Queen\". ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "vite build"
   },
-  "author": "",
+  "author": "Christian Romero Oliva",
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.58.3",
