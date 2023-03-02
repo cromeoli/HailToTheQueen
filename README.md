@@ -30,3 +30,11 @@ npm install
 ```bash
 npm run dev
 ```
+
+Based on:
+
+Fireship
+- https://www.youtube.com/watch?v=T33NN_pPeNI
+
+Hyperplexed
+- https://www.youtube.com/watch?v=zGKNMm4L-r4
