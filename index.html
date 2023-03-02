@@ -11,21 +11,38 @@
 </head>
 
 <body>
-    <main class="mainStructure">
-    <!-- Logo y menú  -->
-        <section>
-            <nav class="navbar">
-                <a class="navbarMenuIconContainer">
-                    <img class="navbarMenuIcon" src="src/assets/img/queenRedIcon.svg" alt="Red queen 2D icon">
-                </a>
-                <a class="logo">
-                    <img src="src/assets/img/LOGO.svg">
-                </a>
-                <a class="navbarMenuIconContainer">
 
-                </a>
-            </nav>
-        </section>
+    <!-- Logo y menú  -->
+    <section id="home">
+        <nav id="navbar" class="navbar">
+            <a id="navbarMenuIcon" class="navbarMenuIconContainer">
+                <img class="navbarMenuIcon" src="src/assets/img/queenBlackIcon.svg" alt="Black queen 2D icon">
+            </a>
+            <a href="#home" class="logo">
+                <img src="src/assets/img/LOGO.svg">
+            </a>
+            <a class="navbarMenuIconContainer">
+
+            </a>
+        </nav>
+    </section>
+
+    <a class="floatingMenuIcon">
+        <img class="navbarMenuIcon" src="src/assets/img/queenRedIcon.svg" alt="Black queen 2D icon">
+    </a>
+
+    <!-- Menú -->
+
+    <section class="menu">
+        <div class="menuOptions">
+            <a id="homeText" href="#home" class="menuText">START</a>
+            <a id="charText" href="#characters" class="menuText">CHARACTERS</a>
+            <a id="worldText" href="#world" class="menuText">WORLD</a>
+            <a id="extraText" href="#extra" class="menuText">VIDEO</a>
+        </div>
+    </section>
+
+    <main class="mainStructure">
 
         <!-- Efectito slider guapo a ve que pasa -->
 
@@ -48,7 +65,7 @@
 
         <!-- Personajes con cartas y sonido -->
 
-        <section>
+        <section id="characters">
             <section class="cardSection">
 
                 <h1 class="cardSectionHeader hidden">Know the pieces</h1>
@@ -86,7 +103,7 @@
                         </div>
                     </div>
 
-                    <div  class="cardSectionText">
+                    <div id="world" class="cardSectionText">
                         In the shadows of the board, the Black Knight awaits.
                         With his sleek, midnight coat and piercing eyes,
                         he is a force to be reckoned with.
@@ -103,22 +120,32 @@
 
         <section class="scenarioSection">
             <h1 class="cardSectionHeader hidden">Acknowledge the board</h1>
+
             <div class="scenarioSectionCarousel hidden">
-                <img src="src/assets/img/torreBG4.png" alt="Image of an ruined scenario with a rook as a ruin tower">
-                <img src="src/assets/img/SegundoEscenario.png" alt="Image of an scenario of a catedral with a sunset">
-                <img src="src/assets/img/escenario1.3.0.jpg" alt="Image of an scenario with a great queen representing a royal tower">
+                <img src="src/assets/img/torreBG4.png"
+                     alt="Image of an ruined scenario with a rook as a ruin tower"
+                >
+                <img src="src/assets/img/SegundoEscenario.png"
+                     alt="Image of an scenario of a catedral with a sunset"
+                >
+                <img src="src/assets/img/escenario1.3.0.jpg"
+                     alt="Image of an scenario with a great queen representing a royal tower"
+                >
             </div>
-            <p class="scenarioSectionText hidden">
+
+            <p id="extra" class="scenarioSectionText hidden">
                 Discover the kingdoms of the chessboard, each with their own unique culture and history.
                 From the verdant fields of the white pawns to the shadowy corners of the black knights,
                 the board is a world waiting to be explored.
             </p>
+
         </section>
 
         <!-- Video de referencia -->
+
         <section class="videoSection">
             <h1 class="cardSectionHeader hidden">Based on the art of "Patapon"</h1>
-            <video src="src/assets/img/patapon.mp4" class="hidden" controls>
+            <video src="src/assets/img/patapon.mp4" class=" video hidden" controls>
 
             </video>
         </section>
