@@ -1,3 +1,6 @@
+//// SELECTORS
+
+// Navbar
 const navbar = document.getElementById("navbar")
 const queenFloatingIcon = document.querySelector(".floatingMenuIcon");
 
@@ -31,6 +34,8 @@ const observer = new IntersectionObserver((entries) => {
         }
     })
 })
+
+//// FUNCTIONS
 
 // Classic... Function delay
 function delay(time) {
@@ -66,6 +71,7 @@ const handleOnMove = e => {
     console.log(p)
 }
 
+//// LISTENERS
 
 // Appearing items function
 hiddenElements.forEach((element) => observer.observe(element))
