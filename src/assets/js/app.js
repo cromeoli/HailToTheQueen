@@ -14,8 +14,8 @@ const left = document.querySelector(".sectionCoolSlider #left-side")
 const sectionCoolSlider = document.querySelector(".sectionCoolSlider")
 
 // Cards
-const knightAudio1 = new Audio("src/assets/audio/EvilKnightRoar.mp3")
-const knightAudio2 = new Audio("src/assets/audio/EvilKnightLaugh.mp3")
+const knightAudio1 = document.getElementById("evilKnightAudio")
+const knightAudio2 = document.getElementById("evilLaughAudio")
 const knightCard = document.querySelector("#knightCard");
 const pawnCard = document.querySelector("#pawnCard");
 
