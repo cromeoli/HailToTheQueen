@@ -1,6 +1,7 @@
 const navbar = document.getElementById("navbar")
 const queenFloatingIcon = document.querySelector(".floatingMenuIcon");
 
+// Main Menu
 const menuIconNavbar = document.getElementById("navbarMenuIcon")
 const menu = document.querySelector('.menu')
 const homeText = document.getElementById('homeText')
@@ -8,16 +9,17 @@ const charText = document.getElementById('charText')
 const worldText = document.getElementById('worldText')
 const extraText = document.getElementById('extraText')
 
-const knightAudio1 = new Audio("src/assets/audio/EvilKnightRoar.mp3")
-const knightAudio2 = new Audio("src/assets/audio/EvilKnightLaugh.mp3")
-
+// CoolSlider
 const left = document.querySelector(".sectionCoolSlider #left-side")
 const sectionCoolSlider = document.querySelector(".sectionCoolSlider")
-const card = document.querySelector(".cardSectionCard");
 
+// Cards
+const knightAudio1 = new Audio("src/assets/audio/EvilKnightRoar.mp3")
+const knightAudio2 = new Audio("src/assets/audio/EvilKnightLaugh.mp3")
 const knightCard = document.querySelector("#knightCard");
 const pawnCard = document.querySelector("#pawnCard");
 
+// Appearing elements
 const hiddenElements = document.querySelectorAll('.hidden');
 
 const observer = new IntersectionObserver((entries) => {
@@ -30,10 +32,12 @@ const observer = new IntersectionObserver((entries) => {
     })
 })
 
+// Classic... Function delay
 function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time))
 }
 
+// Menu functions
 function openMenu(){
     document.body.style.overflow = "hidden";
     navbar.classList.add('navbarFixed')
@@ -53,6 +57,8 @@ function closeMenu(){
     delay(550).then(() => menu.style.display = "none")
 }
 
+
+// CoolSlider function
 const handleOnMove = e => {
     const p = e.clientX / window.innerWidth * 100;
 
@@ -61,8 +67,11 @@ const handleOnMove = e => {
 }
 
 
+// Appearing items function
 hiddenElements.forEach((element) => observer.observe(element))
 
+
+// Cards event listeners
 knightCard.addEventListener("click", function() {
     this.classList.toggle("flipped");
 
@@ -81,6 +90,8 @@ pawnCard.addEventListener("click", function() {
     }
 });
 
+
+// Menu event listeners
 menuIconNavbar.addEventListener("click", function() {
     const computedStyle = window.getComputedStyle(menu);
     const displayValue = computedStyle.getPropertyValue("display");
@@ -109,10 +120,13 @@ extraText.addEventListener("click", function() {
 });
 
 
-
+// Coolsliders event listeners
 sectionCoolSlider.addEventListener("mousemove", e => handleOnMove(e))
 sectionCoolSlider.addEventListener("touchmove", e => handleOnMove(e.touches[0]));
 
+
+
+// Floating queen icon event listeners
 queenFloatingIcon.addEventListener("click", function() {
     const computedStyle = window.getComputedStyle(menu);
     const displayValue = computedStyle.getPropertyValue("display");
@@ -132,5 +146,20 @@ window.addEventListener("scroll", function() {
         queenFloatingIcon.style.display = "flex";
     } else {
         queenFloatingIcon.style.display = "none";
+    }
+});
+
+// Audio player
+const navbarAudio = document.querySelector('.navbarAudio');
+const playButton = navbarAudio.querySelector('i');
+const audio = navbarAudio.querySelector('audio');
+
+playButton.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        playButton.innerText = 'pause';
+    } else {
+        audio.pause();
+        playButton.innerText = 'play_arrow';
     }
 });
