@@ -6,6 +6,14 @@
 [![HTML](https://img.shields.io/badge/Language-HTML-blue)](https://html.com/)
 [![CSS](https://img.shields.io/badge/Language-CSS-brightgreen)](https://www.w3schools.com/css/)
 
+## Overview
+
+![overview](https://github.com/user-attachments/assets/c1e231d8-83ee-4e41-b283-cb1157f50354)
+
+### Menu
+
+![menu](https://github.com/user-attachments/assets/fba01ac5-93ea-4bfa-93aa-d26f625e539f)
+
 ## Description
 
 This is a promotional website for a concept videogame called "Hail to the queen" about 
